@@ -1,5 +1,4 @@
 from tp1_funciones_Barreto import siguiente_clima , climas
-import random  
 
 clima_actual=input("Ingrese estado inicial: ").capitalize()
 cantidad_dias= int(input("Ingrese cantidad de días: "))
