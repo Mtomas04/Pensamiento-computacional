@@ -11,3 +11,4 @@ else:
     for dia in range(cantidad_dias + 1):
         print(f"Día {dia}: {clima_actual}")
         clima_actual = siguiente_clima(clima_actual)
+
