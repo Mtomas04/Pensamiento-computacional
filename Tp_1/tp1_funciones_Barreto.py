@@ -22,22 +22,22 @@ def simular_dias(estado_inicial, cantidad):
     '''
     resultado = [estado_inicial]
     actual = estado_inicial
-    for i in range(cantidad):
+    for i in range(cantidad-1):
         actual = siguiente_clima(actual)
         resultado.append(actual)
-    return resultado    
+    return resultado  
 
 def contar_climas(simulacion):
     
-   ''' Cuenta cuántos días hubo de cada tipo de clima en la simulación.
+    ''' Cuenta cuántos días hubo de cada tipo de clima en la simulación.
     Retorna un diccionario donde clima es la key y conteo el value.
     '''
-   conteo = {}
-   for clima in climas:
-        conteo[clima]=0
-   for estado in simulacion:
-        conteo[estado] += 1  
-        return conteo
+    
+    conteo = {clima: 0 for clima in climas}
+    for estado in simulacion:
+        conteo[estado] += 1
+    return conteo
+
    
 
 def clima_mas_frecuente(conteo):

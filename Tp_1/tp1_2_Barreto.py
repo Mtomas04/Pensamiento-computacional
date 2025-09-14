@@ -1,11 +1,11 @@
-from tp1_funciones_Barreto import simular_dias, contar_climas, clima_mas_frecuente
+from tp1_funciones_Barreto import climas,simular_dias, contar_climas, clima_mas_frecuente, porcentaje_climas
 
 estado_inicial = "Soleado"
 dias_a_simular = 500
 simulacion= simular_dias(estado_inicial, dias_a_simular)
 conteo= contar_climas(simulacion)
 total_dias=len(simulacion)
-porcentajes = contar_climas(simulacion)
+porcentajes = porcentaje_climas(conteo,total_dias)
 
 mas_frecuente = clima_mas_frecuente(conteo)
 
