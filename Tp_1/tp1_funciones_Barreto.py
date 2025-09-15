@@ -32,11 +32,13 @@ def contar_climas(simulacion):
     ''' Cuenta cuántos días hubo de cada tipo de clima en la simulación.
     Retorna un diccionario donde clima es la key y conteo el value.
     '''
-    
-    conteo = {clima: 0 for clima in climas}
+    dicc_conteo={}
+    for clima in climas:
+        dicc_conteo[clima]=dicc_conteo.get(clima,0)
     for estado in simulacion:
-        conteo[estado] += 1
-    return conteo
+        dicc_conteo[estado] += 1
+
+    return dicc_conteo
 
    
 
@@ -62,7 +64,6 @@ def analizar_rachas(simulacion):
     max_racha = 1                        
     clima_max_racha = simulacion[0]     
     rachas_de_4_o_mas = 0                
-
     
     for i in range(1, len(simulacion)):
         if simulacion[i] == simulacion[i - 1]:

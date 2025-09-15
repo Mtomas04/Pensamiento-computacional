@@ -12,3 +12,4 @@ else:
         print(f"Día {dia}: {clima_actual}")
         clima_actual = siguiente_clima(clima_actual)
 
+  

@@ -14,3 +14,4 @@ for clima, cantidad in conteo.items():
     print(f"Días {clima.lower()}s: {cantidad} ({porcentajes[clima]:.2f}%)")
 
 print(f"\n El clima más frecuente fue: {mas_frecuente}")
+
